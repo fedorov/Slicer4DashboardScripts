@@ -49,8 +49,10 @@ set(WITH_DOCUMENTATION FALSE)
 set(WITH_PACKAGES TRUE)
 set(WITH_EXTENSIONS TRUE) # Indicates if 'trusted' Slicer extensions should be
                            # built, tested, packaged and uploaded.
-#set(GIT_REPOSITORY "git://github.com/fedorov/Slicer.git")
-#set(GIT_TAG "Reporting-external-module")
+
+set(GIT_REPOSITORY "git://github.com/BRAINSia/Slicer43.git")
+set(GIT_TAG "")
+
 set(CTEST_BUILD_CONFIGURATION "Release")
 set(CTEST_TEST_TIMEOUT 500)
 set(CTEST_BUILD_FLAGS "-j2") # Use multiple CPU cores to build. For example "-j4" on unix
