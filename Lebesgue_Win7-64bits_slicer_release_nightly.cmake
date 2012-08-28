@@ -78,11 +78,14 @@ set(SCRIPT_MODE "nightly") # "experimental", "continuous", "nightly"
 # Additional CMakeCache options
 #-----------------------------------------------------------------------------
 set(ADDITIONAL_CMAKECACHE_OPTION "
-  ADDITIONAL_C_FLAGS:STRING=
-  ADDITIONAL_CXX_FLAGS:STRING=
+  ADDITIONAL_C_FLAGS:STRING=/MP
+  ADDITIONAL_CXX_FLAGS:STRING=/MP
   Slicer_USE_PYTHONQT:BOOL=ON
   Slicer_USE_PYTHONQT_WITH_TCL:BOOL=ON
   Slicer_BUILD_CLI:BOOL=ON
+  Slicer_USE_VTK_DEBUG_LEAKS:BOOL=OFF
+  Slicer_BUILD_WIN32_CONSOLE:BOOL=OFF
+  Slicer_PATCH_VERSION:STRING=0
   ITK_VERSION_MAJOR:STRING=4
 ")
 
