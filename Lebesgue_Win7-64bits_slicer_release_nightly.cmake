@@ -54,8 +54,9 @@ set(CTEST_TEST_TIMEOUT 500)
 set(CTEST_BUILD_FLAGS "") # Use multiple CPU cores to build. For example "-j4" on unix
 set(CTEST_PARALLEL_LEVEL 8) # Number of tests running in parallel
 
-set(GIT_REPOSITORY "git://github.com/BRAINSIa/Slicer43.git")
+set(GIT_REPOSITORY "git://github.com/BRAINSia/Slicer43.git")
 set(GIT_TAG "")
+set(CTEST_GIT_COMMAND "git")
 
 # experimental:
 #     - run_ctest() macro will be called *ONE* time
