@@ -47,16 +47,17 @@ set(WITH_COVERAGE FALSE)
 set(WITH_DOCUMENTATION FALSE)
 #set(DOCUMENTATION_ARCHIVES_OUTPUT_DIRECTORY ) # for example: $ENV{HOME}/Projects/Doxygen
 set(WITH_PACKAGES TRUE)
-set(WITH_EXTENSIONS TRUE) # Indicates if 'trusted' Slicer extensions should be
+set(WITH_EXTENSIONS FALSE) # Indicates if 'trusted' Slicer extensions should be
                            # built, tested, packaged and uploaded.
 set(CTEST_BUILD_CONFIGURATION "Release")
 set(CTEST_TEST_TIMEOUT 500)
 set(CTEST_BUILD_FLAGS "") # Use multiple CPU cores to build. For example "-j4" on unix
 set(CTEST_PARALLEL_LEVEL 8) # Number of tests running in parallel
+set(CTEST_TRACK_SUFFIX "-ITKv4")
 
 set(GIT_REPOSITORY "git://github.com/BRAINSia/Slicer43.git")
 set(GIT_TAG "")
-set(CTEST_GIT_COMMAND "git")
+set(CTEST_GIT_COMMAND "C:/Program Files (x86)/Git/bin/git.exe")
 
 # experimental:
 #     - run_ctest() macro will be called *ONE* time
@@ -116,7 +117,7 @@ find_program(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
 # Update the following variable to match the chosen build options. This variable is used to
 # generate both the build directory and the build name.
 # See http://www.cdash.org/CDash/index.php?project=Slicer4 for examples
-set(BUILD_OPTIONS_STRING "${MY_BITNESS}bits-QT${MY_QT_VERSION}-PythonQt-ITK4-WithTcl-WithCLI-WithPackages-WithExtensions")
+set(BUILD_OPTIONS_STRING "${MY_BITNESS}bits-QT${MY_QT_VERSION}-PythonQt-ITKv4-WithTcl-WithCLI")
 
 #-----------------------------------------------------------------------------
 # Directory name
@@ -160,6 +161,7 @@ message("WITH_MEMCHECK .............: ${WITH_MEMCHECK}")
 message("WITH_PACKAGES .............: ${WITH_PACKAGES}")
 message("WITH_DOCUMENTATION ........: ${WITH_DOCUMENTATION}")
 message("DOCUMENTATION_ARCHIVES_OUTPUT_DIRECTORY: ${DOCUMENTATION_ARCHIVES_OUTPUT_DIRECTORY}")
+message("CTEST_GIT_COMMAND: ${CTEST_GIT_COMMAND}")
 
 #
 # Convenient function allowing to download a file
