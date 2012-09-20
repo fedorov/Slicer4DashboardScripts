@@ -46,17 +46,15 @@ set(WITH_MEMCHECK FALSE)
 set(WITH_COVERAGE FALSE)
 set(WITH_DOCUMENTATION FALSE)
 #set(DOCUMENTATION_ARCHIVES_OUTPUT_DIRECTORY ) # for example: $ENV{HOME}/Projects/Doxygen
-set(WITH_PACKAGES TRUE)
-set(WITH_EXTENSIONS TRUE) # Indicates if 'trusted' Slicer extensions should be
+set(WITH_PACKAGES FALSE)
+set(WITH_EXTENSIONS FALSE) # Indicates if 'trusted' Slicer extensions should be
                            # built, tested, packaged and uploaded.
-
-set(GIT_REPOSITORY "git://github.com/BRAINSia/Slicer43.git")
-set(GIT_TAG "")
-
+set(GIT_REPOSITORY "git://github.com/fedorov/Slicer.git")
+set(GIT_TAG "Reporting-external-module")
 set(CTEST_BUILD_CONFIGURATION "Release")
 set(CTEST_TEST_TIMEOUT 500)
-set(CTEST_BUILD_FLAGS "-j2") # Use multiple CPU cores to build. For example "-j4" on unix
-set(CTEST_PARALLEL_LEVEL 2) # Number of tests running in parallel
+set(CTEST_BUILD_FLAGS "") # Use multiple CPU cores to build. For example "-j4" on unix
+set(CTEST_PARALLEL_LEVEL 1) # Number of tests running in parallel
 
 # experimental:
 #     - run_ctest() macro will be called *ONE* time
