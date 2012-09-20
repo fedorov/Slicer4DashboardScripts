@@ -55,6 +55,7 @@ set(CTEST_BUILD_CONFIGURATION "Release")
 set(CTEST_TEST_TIMEOUT 500)
 set(CTEST_BUILD_FLAGS "") # Use multiple CPU cores to build. For example "-j4" on unix
 set(CTEST_PARALLEL_LEVEL 1) # Number of tests running in parallel
+set(CTEST_TRACK_SUFFIX "-ITKv4")
 
 # experimental:
 #     - run_ctest() macro will be called *ONE* time
