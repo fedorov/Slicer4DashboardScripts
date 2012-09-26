@@ -49,8 +49,8 @@ set(WITH_DOCUMENTATION FALSE)
 set(WITH_PACKAGES FALSE)
 set(WITH_EXTENSIONS FALSE) # Indicates if 'trusted' Slicer extensions should be
                            # built, tested, packaged and uploaded.
-set(GIT_REPOSITORY "git://github.com/fedorov/Slicer.git")
-set(GIT_TAG "Reporting-external-module")
+set(GIT_REPOSITORY "git://github.com/BRAINSia/Slicer43.git")
+set(GIT_TAG "")
 set(CTEST_BUILD_CONFIGURATION "Release")
 set(CTEST_TEST_TIMEOUT 500)
 set(CTEST_BUILD_FLAGS "") # Use multiple CPU cores to build. For example "-j4" on unix
@@ -112,7 +112,7 @@ find_program(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
 # Update the following variable to match the chosen build options. This variable is used to
 # generate both the build directory and the build name.
 # See http://www.cdash.org/CDash/index.php?project=Slicer4 for examples
-set(BUILD_OPTIONS_STRING "${MY_BITNESS}bits-QT${MY_QT_VERSION}-PythonQt-ITKv4-WithTcl-WithCLI-WithPackages-WithExtensions")
+set(BUILD_OPTIONS_STRING "${MY_BITNESS}bits-QT${MY_QT_VERSION}-PythonQt-ITKv4-WithTcl-WithCLI")
 
 #-----------------------------------------------------------------------------
 # Directory name
